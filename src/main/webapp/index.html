@@ -7,13 +7,26 @@
         <title>new title</title>
     </head>
     <body>
+        <h2>Do a POST Request</h2>
         <form METHOD="POST"
             ACTION="http://localhost:8080/StockQuote/QuoteServlet">
-            <p><input type="text" placeholder="Insert stock symbol"/></p>
+            <p><input type="text" placeholder="Insert stock symbol" name="symbol" value=""/></p>
             <fieldset style="width:50vw">
-                <p><input type="radio" name="returnType" id="xml">xml</p>
-                <p><input type="radio" name="returnType" id="xml">html</p>
-                <p><input type="radio" name="returnType" id="xml">json</p>
+                <p><input type="radio" name="returnType" value="xml" checked>xml (default)</p>
+                <p><input type="radio" name="returnType" value="html">html</p>
+                <p><input type="radio" name="returnType" value="json">json</p>
+            </fieldset>
+            <p><input type="SUBMIT" name="Start"/></p>
+        </form>
+
+        <h2>Do a GET Request...</h2>
+        <form METHOD="GET"
+            ACTION="http://localhost:8080/StockQuote/QuoteServlet">
+            <p><input type="text" placeholder="Insert stock symbol" name="symbol" value=""/></p>
+            <fieldset style="width:50vw">
+                <p><input type="radio" name="returnType" value="xml" checked>xml (default)</p>
+                <p><input type="radio" name="returnType" value="html">html</p>
+                <p><input type="radio" name="returnType" value="json">json</p>
             </fieldset>
             <p><input type="SUBMIT" name="Start"/></p>
         </form>

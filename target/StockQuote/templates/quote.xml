@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+    
+    <stock-quote>
+        <stock-ticker>%s</stock-ticker>
+        <stock-price>%s</stock-price>
+        <response-timedate>%s</response-timedate>
+    </stock-quote>

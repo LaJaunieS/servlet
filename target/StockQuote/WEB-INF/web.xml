@@ -4,6 +4,30 @@
 
 <web-app>
   <display-name>Stock Quote App</display-name>
+
+  <filter>
+    <display-name>QuoteFilter</display-name>
+    <filter-name>QuoteFilter</filter-name>
+    <filter-class>edu.uw.spl.web.QuoteFilter</filter-class>
+    <init-param>
+      <param-name>html</param-name>
+      <param-value>templates/quote.html</param-value>
+    </init-param>
+    <init-param>
+      <param-name>json</param-name>
+      <param-value>templates/quote.json</param-value>
+    </init-param>
+    <init-param>
+      <param-name>xml</param-name>
+      <param-value>templates/quote.xml</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>QuoteFilter</filter-name>
+    <servlet-name>QuoteServlet</servlet-name>
+  </filter-mapping>
+
   <welcome-file-list>
       <welcome-file>index.html</welcome-file>
   </welcome-file-list>
@@ -17,6 +41,7 @@
         <param-name>ticker</param-name>
         <param-value></param-value>
         <param-name>price</param-name>
+        <param-value></param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
